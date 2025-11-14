@@ -1,12 +1,12 @@
 services:
 #Definimos el servicio Web, en este caso Odoo
-  odoo_dev_dam:
+  odoo_dev_Marcos:
     #Indicamos que imagen de Docker Hub utilizaremos
     image: odoo:19
-    container_name: odoo_dev_dam
+    container_name: odoo_dev_Marcos
     #Indicamos que depende de "db", por lo cual debe ser procesada primero "db"
     depends_on:
-        - postgres_dev_dam
+        - postgres_dev_Marcos
 
     # Port Mapping: indicamos que el puerto 8069 del contenedor se mapeara con el mismo puerto en el anfritrion
     # Permitiendo acceder a Odoo mediante http://localhost:8069
@@ -25,7 +25,7 @@ services:
     user: root
     # Definimos variables de entorno de Odoo
     environment:
-      - HOST=postgres_dev_dam
+      - HOST=postgres_dev_Marcos
       - USER=odoo
       - PASSWORD=odoo
     # Indica que pasa ese parametro al arrancar el servicio Odoo
